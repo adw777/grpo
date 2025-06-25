@@ -19,6 +19,14 @@ import argparse
 import logging
 from typing import List, Dict, Any, Optional
 from pathlib import Path
+import wandb
+from dotenv import load_dotenv
+
+load_dotenv()
+
+wandb.login(key=os.getenv("WANDB_TOKEN"))
+
+# wandb.init(project="grpo-training", name="grpo-training") # update accordingly 
 
 # Core libraries
 from unsloth import FastLanguageModel

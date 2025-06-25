@@ -1,1 +1,6 @@
 venv
+.env
+unsloth_compiled_cache
+outputs
+grpo_trainer_lora_model
+wandb
