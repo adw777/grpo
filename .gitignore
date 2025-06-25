@@ -4,3 +4,5 @@ unsloth_compiled_cache
 outputs
 grpo_trainer_lora_model
 wandb
+grpo-gsm8k/
+grpo_saved_lora/

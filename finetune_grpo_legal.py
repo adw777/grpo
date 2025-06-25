@@ -142,9 +142,9 @@ class GRPOConfig:
         self.max_grad_norm = 1.0
         
         # Output configuration
-        self.output_dir = "outputs"
-        self.model_save_path = "grpo_saved_lora"
-        self.report_to = "none"
+        self.output_dir = "legal-grpo"
+        self.model_save_path = "grpo_legal_lora"
+        self.report_to = "wandb"
         
         # Format tokens for structured legal responses
         self.reasoning_start = "<legal_analysis>"
@@ -614,8 +614,8 @@ def main():
     parser.add_argument("--max-steps", type=int, default=500, help="Maximum training steps")
     parser.add_argument("--lora-rank", type=int, default=64, help="LoRA rank")
     parser.add_argument("--learning-rate", type=float, default=5e-6, help="Learning rate")
-    parser.add_argument("--output-dir", default="outputs", help="Output directory")
-    parser.add_argument("--save-path", default="grpo_saved_lora", help="LoRA save path")
+    parser.add_argument("--output-dir", default="legal-grpo", help="Output directory")
+    parser.add_argument("--save-path", default="grpo_legal_lora", help="LoRA save path")
     parser.add_argument("--test-only", action="store_true", help="Only run inference test")
     parser.add_argument("--save-merged", choices=["merged_16bit", "merged_4bit", "gguf"], help="Save merged model")
     parser.add_argument("--enable-wandb", action="store_true", help="Enable W&B logging")
